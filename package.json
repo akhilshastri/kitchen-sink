@@ -1,0 +1,26 @@
+{
+  "private": true,
+  "workspaces": [
+    "packages/util/*",
+    "packages/config/*",
+    "packages/core/*",
+    "packages/testing/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "clean": "turbo run clean",
+    "dev": "turbo run dev --no-cache --parallel --continue",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "lint": "turbo run lint",
+    "test": "turbo run test"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.24.4",
+    "prettier": "^2.5.1",
+    "turbo": "latest"
+  },
+  "dependencies": {
+    "changeset": "^0.2.6"
+  }
+}
